@@ -1,0 +1,27 @@
+<div *ngIf="user">
+  <h2>{{user.name}}</h2>
+  <div>ID:{{user.id}}</div>
+  <div>
+      <label>Email:
+      <input type="email" [(ngModel)]="user.email" placeholder="email"/>
+      </label>
+  </div>
+  <div>
+      <label>Gender:
+      <input type="radio" [(ngModel)]="user.gender"  value="male"/>Male
+      <input type="radio" [(ngModel)]="user.gender"  value="female"/>Female
+      </label>
+  </div>
+  <div>
+      <label>Surname:
+      <input type="text" [(ngModel)]="user.surname"  placeholder="Surname"/>
+      </label>
+  </div>
+  <div>
+    <label>password:
+    <input type="password" [(ngModel)]="user.password"  placeholder="password"/>
+    </label>
+</div>
+</div>
+<button (click)="updateUser()">Update user</button>
+<button (click)="backpage()">Back</button>
